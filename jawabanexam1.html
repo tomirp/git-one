@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Avenger</title>
+    <style>
+        table, thead, td, th {
+            border: 2px solid black;
+            border-collapse: collapse;
+            padding: 5px
+        }
+        form {
+            width: 50%;
+            margin: 0px auto;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css"> -->
+    <script defer src="jawabanexam1.js"></script>
+</head>
+<body>
+    <form>
+        <fieldset>
+        <legend>Filter</legend>
+                    <td>
+                        <p>Nama: <input type="text" id="nam1" onkeyup="fn1()" onkeydown="fn1()"></p>
+                        <p>Umur: <input type="number" id="um1" onkeyup="fn2()"> - <input type="number" id="um2" onkeyup="fn2()"></p>
+                        <p>Pekerjaan: <select id="job"></select></p>
+                        <p><input type = "button" value="Search Job" onclick="fn3()"></button></p>
+                        <p><input type="radio" name="gender" id="gen" value="Pria">Pria
+                        <input type="radio" name="gender" id="gen" value="Wanita">Wanita</p>
+                        <p><input type = "button" value="Filter Gender" onclick="fn4()"></button></p>
+                    </td> 
+        </fieldset>
+
+        <fieldset>
+            <legend>Sorting</legend>
+            <p><input type = "button" value="Sort Nama" onclick="fn5()"></button>
+            <input type = "button" value="Sort Umur" onclick="fn6()"></button>
+            <input type = "button" value="Sort Kelamin" onclick="fn7()"></button>
+            <input type = "button" value="Sort Pekerjaan" onclick="fn8()"></button></p>
+        </fieldset>
+        
+        <fieldset>
+        <legend>Input Data</legend>
+            <table>
+                <tr>
+                    <td><p><input type="text" name="nama2" id="nama"></p></td>
+                    <td><p><input type="number" name="umur2" id="umur"></p></td>
+                    <td><p><input type="text" name="job2" id="job2"></p></td>   
+                    <td><p><input type="radio" name="gender2" value=" Pria">Pria   
+                    <input type="radio" name="gender2" value=" Wanita">Wanita</p></td>   
+                </tr>
+            </table>
+                    <p><input type = "button" value="submit" onclick = "sub()"></button></p>
+        </fieldset>
+        <br>
+        <fieldset>
+        <legend>Tabel Data</legend>
+            <table id="datasaya">
+                    <thead>
+                        <th>Nama</th>
+                        <th>Umur</th>
+                        <th>Pekerjaan</th>
+                        <th>Jenis Kelamin</th>
+                    </thead>
+                        <tbody id="output">
+                        </tbody>
+            </table>
+        </fieldset>
+    </form>
+</body>
+</html>
